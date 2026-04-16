@@ -1,0 +1,217 @@
+/* মেইন ভেরিয়েবলসমূহ */
+:root {
+  --primary: #ff4d6d;
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --text-light: #f1f5f9;
+  --text-dim: #94a3b8;
+}
+
+/* বেসিক রিসেট */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Hind Siliguri", "Outfit", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* নেভিগেশন স্টাইল */
+nav {
+  padding: 20px 0;
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.btn-write {
+  background: var(--primary);
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.btn-write:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+}
+
+/* মেইন কন্টেইনার */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* হেডার ও সার্চ */
+.explore-header {
+  text-align: center;
+  padding: 100px 0 60px;
+}
+
+.explore-header h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.explore-header h1 span {
+  color: var(--primary);
+}
+
+.search-box {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0 25px;
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-box button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.search-box button:hover {
+  transform: scale(1.03);
+  background: #ff3355;
+}
+
+/* ক্যাটাগরি গ্রিড */
+.category-section {
+  padding-bottom: 100px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cat-card {
+  background: var(--card-bg);
+  padding: 50px 30px;
+  border-radius: 28px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.cat-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--primary);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.cat-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.cat-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.cat-card p {
+  color: var(--text-dim);
+  font-size: 1rem;
+}
+
+/* মোবাইল রেসপনসিভ */
+@media (max-width: 768px) {
+  .explore-header h1 {
+    font-size: 2.5rem;
+  }
+  .search-box {
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+  }
+  .search-box input {
+    padding: 15px;
+    text-align: center;
+  }
+}
