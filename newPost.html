@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Post - Source</title>
+    <link rel="stylesheet" href="newPost.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">Sour<span>ce</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="english.html">English</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="form-container">
+        <div class="page-title">
+          <span class="badge">Editor</span>
+          <h2 class="editor-heading">Create a New Story</h2>
+        </div>
+
+        <form action="#">
+          <div class="form-group">
+            <label for="title">Post Title (শিরোনাম)</label>
+            <input
+              type="text"
+              id="title"
+              class="form-control"
+              placeholder="আপনার আর্টিকেলের শিরোনাম লিখুন..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category (ক্যাটাগরি)</label>
+            <select id="category" class="form-control">
+              <option>Motivation</option>
+              <option>Technology</option>
+              <option>Lifestyle</option>
+              <option>Health</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="image">Featured Image URL (ছবির লিংক)</label>
+            <input
+              type="url"
+              id="image"
+              class="form-control"
+              placeholder="https://example.com/image.jpg"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="content">Content (মূল বিষয়বস্তু)</label>
+            <textarea
+              id="content"
+              class="form-control"
+              placeholder="আপনার গল্প বা তথ্য বিস্তারিত লিখুন..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-publish">Publish Post</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
