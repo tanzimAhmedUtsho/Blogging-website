@@ -208,3 +208,26 @@ nav {
     padding: 60px 20px 100px;
   }
 }
+/* Language Button Style */
+.btn-lang {
+  border: 1px solid var(--text-dim);
+  color: var(--text-light) !important;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-lang:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary) !important;
+}
+
+/* Nav links alignment fix */
+.nav-links li {
+  margin-left: 20px; /* বাটনগুলোর মাঝখানের গ্যাপ ঠিক করার জন্য */
+  display: flex;
+  align-items: center;
+}
