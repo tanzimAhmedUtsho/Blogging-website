@@ -5,16 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Source - Popular Articles</title>
     <link rel="stylesheet" href="popular.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ইনলাইন সিএসএস নতুন এলিমেন্টগুলোর জন্য */
+      body {
+        font-family: "Hind Siliguri", sans-serif;
+        background-color: #f8fafc;
+      }
+      .content-layout {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      .filter-bar {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .filter-btn {
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid #cbd5e1;
+        background: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .filter-btn.active {
+        background: #ff4d6d;
+        color: white;
+        border-color: #ff4d6d;
+      }
+      .sidebar-widget {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      .sidebar-widget h4 {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        color: #1e293b;
+        border-left: 4px solid #ff4d6d;
+        padding-left: 10px;
+      }
+      .author-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+      }
+      .author-item img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .trending-tag {
+        display: inline-block;
+        padding: 5px 12px;
+        background: #f1f5f9;
+        border-radius: 15px;
+        margin: 0 5px 10px 0;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: #475569;
+      }
+      @media (max-width: 992px) {
+        .content-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo">Sou<span>rce</span></div>
+        <div class="logo">
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >Sou<span>rce</span></a
+          >
+        </div>
         <ul class="nav-links">
-          <li><a href="#">Explore</a></li>
+          <li><a href="explore.html">Explore</a></li>
           <li><a href="#" class="active">Popular</a></li>
-          <li><button class="lang-btn">English</button></li>
-          <li><button class="write-btn">Write Post</button></li>
+          <li><a href="EnglishPage.html" class="lang-btn">English</a></li>
+          <li><a href="newPost.html" class="write-btn">Write Post</a></li>
         </ul>
       </nav>
     </header>
@@ -29,69 +112,142 @@
         <p>সেরা উক্তি এবং জীবন পরিবর্তনের গল্প নিয়ে আমাদের আজকের আয়োজন।</p>
       </section>
 
-      <section class="article-grid">
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=500"
-              alt="Motivation"
-            />
+      <div class="content-layout">
+        <section class="main-content">
+          <div class="filter-bar">
+            <button class="filter-btn active">All Time</button>
+            <button class="filter-btn">This Week</button>
+            <button class="filter-btn">This Month</button>
           </div>
-          <div class="card-content">
-            <span class="cat-badge motivation">MOTIVATION</span>
-            <h3>সাফল্যের গোপন চাবিকাঠি কি?</h3>
-            <p>
-              মানুষের সফল হওয়ার পেছনে সবচেয়ে বড় ভূমিকা রাখে ধৈর্য এবং পরিশ্রম...
-            </p>
-            <div class="author">
-              <img src="https://i.pravatar.cc/150?u=1" alt="Ariful Islam" />
-              <span>Ariful Islam</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500"
-              alt="Technology"
-            />
-          </div>
-          <div class="card-content">
-            <span class="cat-badge technology">TECHNOLOGY</span>
-            <h3>এআই (AI) কি মানুষের জায়গা নেবে?</h3>
-            <p>
-              কৃত্রিম বুদ্ধিমত্তা কীভাবে আমাদের প্রাত্যহিক জীবন বদলে দিচ্ছে এবং
-              ভবিষ্যতের...
-            </p>
-            <div class="author">
-              <img src="https://i.pravatar.cc/150?u=2" alt="Sumaiya Khan" />
-              <span>Sumaiya Khan</span>
+          <div class="article-grid">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=500"
+                  alt="Motivation"
+                />
+              </div>
+              <div class="card-content">
+                <span class="cat-badge motivation">MOTIVATION</span>
+                <h3>সাফল্যের গোপন চাবিকাঠি কি?</h3>
+                <p>
+                  মানুষের সফল হওয়ার পেছনে সবচেয়ে বড় ভূমিকা রাখে ধৈর্য এবং
+                  পরিশ্রম...
+                </p>
+                <div class="author">
+                  <img src="https://i.pravatar.cc/150?u=1" alt="Ariful Islam" />
+                  <span>Ariful Islam</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=500"
-              alt="Lifestyle"
-            />
-          </div>
-          <div class="card-content">
-            <span class="cat-badge lifestyle">LIFESTYLE</span>
-            <h3>সুস্থ থাকার ৫টি সহজ নিয়ম</h3>
-            <p>
-              শারীরিক ও মানসিক প্রশান্তি বজায় রাখতে প্রতিদিনের খাদ্যতালিকায় যা
-              রাখবেন...
-            </p>
-            <div class="author">
-              <img src="https://i.pravatar.cc/150?u=3" alt="Rakib Hasan" />
-              <span>Rakib Hasan</span>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500"
+                  alt="Technology"
+                />
+              </div>
+              <div class="card-content">
+                <span class="cat-badge technology">TECHNOLOGY</span>
+                <h3>এআই (AI) কি মানুষের জায়গা নেবে?</h3>
+                <p>
+                  কৃত্রিম বুদ্ধিমত্তা কীভাবে আমাদের প্রাত্যহিক জীবন বদলে
+                  দিচ্ছে...
+                </p>
+                <div class="author">
+                  <img src="https://i.pravatar.cc/150?u=2" alt="Sumaiya Khan" />
+                  <span>Sumaiya Khan</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=500"
+                  alt="Lifestyle"
+                />
+              </div>
+              <div class="card-content">
+                <span class="cat-badge lifestyle">LIFESTYLE</span>
+                <h3>সুস্থ থাকার ৫টি সহজ নিয়ম</h3>
+                <p>শারীরিক ও মানসিক প্রশান্তি বজায় রাখতে যা করবেন...</p>
+                <div class="author">
+                  <img src="https://i.pravatar.cc/150?u=3" alt="Rakib Hasan" />
+                  <span>Rakib Hasan</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h4>Top Contributors</h4>
+            <div class="author-item">
+              <img src="https://i.pravatar.cc/100?u=1" alt="Ariful" />
+              <div>
+                <strong>Ariful Islam</strong>
+                <p style="font-size: 0.8rem; color: #64748b">12 Articles</p>
+              </div>
+            </div>
+            <div class="author-item">
+              <img src="https://i.pravatar.cc/100?u=2" alt="Sumaiya" />
+              <div>
+                <strong>Sumaiya Khan</strong>
+                <p style="font-size: 0.8rem; color: #64748b">9 Articles</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4>Trending Topics</h4>
+            <a href="#" class="trending-tag">#ArtificialIntelligence</a>
+            <a href="#" class="trending-tag">#HealthTips</a>
+            <a href="#" class="trending-tag">#Motivation2026</a>
+            <a href="#" class="trending-tag">#StartupLife</a>
+            <a href="#" class="trending-tag">#WebDesign</a>
+          </div>
+        </aside>
+      </div>
     </main>
+
+    <footer
+      style="
+        background: #0f172a;
+        color: #94a3b8;
+        padding: 60px 20px;
+        text-align: center;
+        margin-top: 60px;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div
+          style="
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+          "
+        >
+          Sour<span style="color: #ff4d6d">ce</span>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+          "
+        >
+          <a href="#" style="color: #94a3b8; text-decoration: none">About</a>
+          <a href="#" style="color: #94a3b8; text-decoration: none">Privacy</a>
+          <a href="#" style="color: #94a3b8; text-decoration: none">Contact</a>
+        </div>
+        <p>&copy; 2026 Source Blog. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
