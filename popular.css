@@ -199,7 +199,14 @@ nav {
   padding: 15px;
   border-radius: 12px;
   box-shadow: var(--shadow);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
 }
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
+} /* Chrome/Safari */
 
 .filter-btn {
   padding: 8px 20px;
