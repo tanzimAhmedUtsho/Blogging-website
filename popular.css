@@ -40,6 +40,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
 }
 
 .logo {
@@ -58,6 +59,26 @@ nav {
   list-style: none;
   align-items: center;
   gap: 25px;
+}
+
+/* Hamburger Menu */
+.menu-checkbox {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
 .nav-links a {
