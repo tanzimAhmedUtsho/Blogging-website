@@ -90,6 +90,31 @@ nav {
 /* Drawer Social Icons - Hidden on Desktop */
 .drawer-socials {
   display: none;
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.drawer-socials-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.drawer-socials a {
+  width: 38px !important;
+  height: 38px !important;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.drawer-socials a:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
 }
 
 .nav-links a.active,
@@ -300,12 +325,14 @@ nav {
 
 .interaction-btn:hover {
   color: var(--primary);
+  transform: scale(1.1);
 }
 
 .interaction-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
+  transition: transform 0.3s ease;
 }
 
 .read-more-btn {
@@ -429,8 +456,17 @@ nav {
 }
 
 .newsletter-icon {
-  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  background: rgba(244, 63, 94, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--primary);
 }
 
 .newsletter-container h2 {

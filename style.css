@@ -102,7 +102,34 @@ nav {
 
 /* Drawer Social Icons - Hidden on Desktop */
 .drawer-socials {
-  display: none;
+  display: none; /* Desktop এ লুকানো থাকবে */
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.drawer-socials-wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.drawer-socials a {
+  width: 40px !important;
+  height: 40px !important;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  transition: var(--transition);
+}
+
+.drawer-socials a:hover {
+  transform: translateY(-5px);
+  background: var(--primary);
 }
 
 /* Hero Section */
@@ -227,6 +254,9 @@ nav {
 
 /* Responsive */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .hamburger {
     display: flex;
     position: relative;
@@ -242,7 +272,7 @@ nav {
     width: 280px;
     height: 100vh;
     background: rgba(15, 23, 42, 0.98);
-    padding: 100px 40px;
+    padding: 80px 30px 40px;
     gap: 20px;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -270,46 +300,8 @@ nav {
     text-align: center;
   }
 
-  .nav-links .drawer-socials {
-    display: flex;
-    margin-top: auto;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    gap: 15px;
-    width: 100%;
-  }
-
-  .drawer-socials a {
-    width: 38px !important;
-    height: 38px !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
-    color: #cbd5e1 !important;
-    transition: 0.3s;
-  }
-
-  .drawer-socials a:hover {
-    background: var(--primary);
-    color: #fff !important;
-    transform: translateY(-3px);
-  }
-
-  .menu-checkbox:checked ~ .nav-links {
-    right: 0;
-  }
-
-  .menu-checkbox:checked ~ .hamburger span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .menu-checkbox:checked ~ .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-checkbox:checked ~ .hamburger span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  .grid {
+    grid-template-columns: 1fr;
   }
 
   .hero {
