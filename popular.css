@@ -87,6 +87,11 @@ nav {
   transition: all 0.3s ease;
 }
 
+/* Drawer Social Icons - Hidden on Desktop */
+.drawer-socials {
+  display: none;
+}
+
 .nav-links a.active,
 .nav-links a:hover {
   color: #fff;
