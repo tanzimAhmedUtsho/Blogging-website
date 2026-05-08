@@ -202,6 +202,64 @@
       </div>
     </main>
 
+    <section class="reviews-section">
+      <h2>পাঠকদের মতামত (Reviews)</h2>
+      <div class="review-grid">
+        <div class="review-form-card">
+          <h3>আপনার রিভিউ দিন</h3>
+          <form>
+            <input type="text" placeholder="আপনার নাম" required />
+            <select required>
+              <option value="" disabled selected>রেটিং নির্বাচন করুন</option>
+              <option value="5">⭐⭐⭐⭐⭐ (৫/৫)</option>
+              <option value="4">⭐⭐⭐⭐ (৪/৫)</option>
+              <option value="3">⭐⭐⭐ (৩/৫)</option>
+              <option value="2">⭐⭐ (২/৫)</option>
+              <option value="1">⭐ (১/৫)</option>
+            </select>
+            <textarea
+              placeholder="আপনার মন্তব্য..."
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit" class="submit-review-btn">
+              রিভিউ জমা দিন
+            </button>
+          </form>
+        </div>
+        <div class="reviews-display">
+          <div class="review-card">
+            <div class="review-user-info">
+              <strong>তানজিম আহমেদ</strong>
+              <span class="review-stars">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p>
+              "খুবই চমৎকার একটি ওয়েবসাইট। আর্টিকেলের বিষয়বস্তুগুলো অনেক উন্নত
+              এবং আধুনিক।"
+            </p>
+            <small
+              style="color: var(--text-muted); display: block; margin-top: 10px"
+              >২ দিন আগে</small
+            >
+          </div>
+          <div class="review-card">
+            <div class="review-user-info">
+              <strong>আরিফুল ইসলাম</strong>
+              <span class="review-stars">⭐⭐⭐⭐</span>
+            </div>
+            <p>
+              "মোটিভেশনাল সেকশনটা আমার খুব ভালো লেগেছে। তবে টেকনোলজি বিভাগে আরও
+              নিয়মিত পোস্ট আশা করছি।"
+            </p>
+            <small
+              style="color: var(--text-muted); display: block; margin-top: 10px"
+              >৫ দিন আগে</small
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="newsletter">
       <div class="newsletter-container">
         <div class="newsletter-icon">✉️</div>

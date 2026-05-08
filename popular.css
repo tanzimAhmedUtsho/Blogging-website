@@ -474,3 +474,119 @@ nav {
     padding: 15px;
   }
 }
+
+/* Review Section Styles */
+.reviews-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.reviews-section h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+}
+
+.review-form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  height: fit-content;
+  border: 1px solid #f1f5f9;
+}
+
+.review-form-card h3 {
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  color: var(--text-main);
+  font-family: "Outfit", sans-serif;
+}
+
+.review-form-card input,
+.review-form-card select,
+.review-form-card textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.review-form-card input:focus,
+.review-form-card select:focus,
+.review-form-card textarea:focus {
+  border-color: var(--primary);
+}
+
+.submit-review-btn {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+.submit-review-btn:hover {
+  background: #e11d48;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+
+.reviews-display {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.review-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--primary);
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: translateX(5px);
+}
+
+.review-user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-user-info strong {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+@media (max-width: 900px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-section h2 {
+    font-size: 1.8rem;
+  }
+}
